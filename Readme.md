@@ -1,4 +1,4 @@
-# Docker Compose Tutorial
+# Docker Compose Tutorial (Flask + Gunicorn + Nginx)
 
 ![GitHub](https://img.shields.io/github/license/mdsa3d/
 Tutorial-flask_gunicorn_nginx_docker-compose?style=for-the-badge)
