@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# Docker Compose Tutorial
+Docker Compose tutorial for running a flask application with gunicorn and exposing it to the internet with nginx reverse_proxy
 
-You can use the [editor on GitHub](https://github.com/mdsa3d/Tutorial-flask_gunicorn_nginx_docker-compose/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Creating Flask application
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Flask application is located under `app` directory. To start building the application create a python virtual environment.
+```powershell
+python -m venv venv 
 ```
+Where `venv` is your virtual environment. Then activate the environment.
+```
+venv\Scripts\activate
+```
+Now install the required python libraries.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mdsa3d/Tutorial-flask_gunicorn_nginx_docker-compose/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+pip install gunicorn flask
+```
+Write these libraries to the `requirements.txt`
+```
+pip freeze > requirements.txt
+```
+Please, make sure that all of these files are located under `app` directory.
+Following this generate applocation file `app.py` which will contains the `hello world ` example.
+The contents file is `app.py`:
+```python
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello_world():
+    return "Hello World!"
+```
