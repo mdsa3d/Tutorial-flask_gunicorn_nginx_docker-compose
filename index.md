@@ -45,14 +45,14 @@ from app import server
 if __name__ == "__main__":
     server.run(host='0.0.0.0', port=8000)
 ```
-
+### Test application
 To test the application, run the following in command prompt or terminal.
 ```
 gunicorn -w 1 -b 0.0.0.0:8000 wsgi:app
 ```
 This will start the service at `localhost` port 8000. To see the output go to the following: http://localhost:8000
 
-## Dockerizing the app
+### Dockerizing the app
 
 Generate a docker file:
 ```Dockerfile
