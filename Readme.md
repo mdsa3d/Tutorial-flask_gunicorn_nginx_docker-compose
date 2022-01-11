@@ -1,11 +1,8 @@
 # Docker Compose Tutorial (Flask + Gunicorn + Nginx)
 
-![GitHub](https://img.shields.io/github/license/mdsa3d/
-Tutorial-flask_gunicorn_nginx_docker-compose?style=for-the-badge)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/mdsa3d/
-Tutorial-flask_gunicorn_nginx_docker-compose/pages%20build%20and%20deployment/gh-pages?style=for-the-badge)
-[![](https://img.shields.io/badge/docs-stable-blue?style=for-the-badge)](https://mdsa3d.github.io/
-Tutorial-flask_gunicorn_nginx_docker-compose/)
+![GitHub](https://img.shields.io/github/license/mdsa3d/Tutorial-flask_gunicorn_nginx_docker-compose?style=for-the-badge)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/mdsa3d/Tutorial-flask_gunicorn_nginx_docker-compose/pages%20build%20and%20deployment/gh-pages?style=for-the-badge)
+[![](https://img.shields.io/badge/docs-stable-blue?style=for-the-badge)](https://mdsa3d.github.io/Tutorial-flask_gunicorn_nginx_docker-compose/)
 
 This repository shows a simple demonstration of configuring docker compose service for flask application running on WSGI server (Gunicorn) and exposed using nginx as reverse proxy web server.
 
