@@ -159,3 +159,40 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY project.conf /etc/nginx/conf.d/
 ```
 
+## Docker Compose
+This file `docker-compose.yml` will allow the containers to talk to each other and run the whole system. 
+
+```yml
+# docker-compose.yml
+version: '3.9'
+services:
+    app:
+        build: ./app
+        ports:
+        - 8000:80
+        command: gunicorn -w 1 -b 0.0.0.0:8000 wsgi:app
+    nginx:
+        build: ./nginx
+        ports:
+        - 80:80
+        depends_on:
+        - app
+```
+
+## Service Layout
+
+Make sure that the final layout tree looks similar. This is to ensure that all teh files are located under correct directory.
+```
+├── app 
+│   ├── venv          
+|   ├── app.py          
+│   ├── wsgi.py
+│   ├── Dockerfile
+|   └── requirements.txt
+├── nginx
+│   ├── nginx.conf          
+│   ├── project.conf
+│   └── Dockerfile
+├── docker-compose.yml
+└── run_docker.sh
+```
